@@ -4,6 +4,9 @@ import mx.itson.pou.cocina.implementacion.ComidaImplementacion;
 import mx.itson.pou.cocina.implementacion.RefrigeradorImplementacion;
 import mx.itson.pou.cocina.interfaces.IComida;
 import mx.itson.pou.cocina.interfaces.IRefrigerador;
+import mx.itson.pou.datos.entidades.Pou;
+import mx.itson.pou.datos.implementacion.PouImplementacion;
+import mx.itson.pou.datos.interfaces.IPou;
 import mx.itson.pou.dormitorio.entidades.Closet;
 import mx.itson.pou.dormitorio.entidades.Cosa;
 import mx.itson.pou.dormitorio.implementacion.ClosetImplementacion;
@@ -26,6 +29,11 @@ import mx.itson.pou.laboratorio.interfaces.IPocima;
  *
  */
 public class Main {
+	
+	
+	
+	static Pou pou = new Pou();
+	static IPou p = new PouImplementacion();
 	
 	// ----------- Cocina -------------
 	static Comida comida = new Comida();
@@ -51,6 +59,23 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		
+		//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+		pocima = po.getById(15);
+		System.out.println(pocima.getNombre());
+		po.getAll();
+		botiquin = bo.getById(1);
+		bo.getAll();
+		pocima = botiquin.getPocima();
+		System.out.println(pocima.getNombre());
+		
+		pou = p.getPou();
+		System.out.println(pou.getNombre() + " " + pou.getNivelSatisfaccion());
+		pou.setnivelSatisfaccion(50);
+		p.setPou(pou);
+		System.out.println(pou.getNombre() + " " + pou.getNivelSatisfaccion());
+		
 		//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 		
 		comida = c.getById(1);
@@ -70,15 +95,7 @@ public class Main {
 		clo.getAll();
 		cosa = closet.getCosa();
 		System.out.println(cosa.getNombre());
-		
-		//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-		pocima = po.getById(1);
-		System.out.println(pocima.getNombre());
-		po.getAll();
-		botiquin = bo.getById(1);
-		bo.getAll();
-		pocima = botiquin.getPocima();
-		System.out.println(pocima.getNombre());
+
 	}
 
 }

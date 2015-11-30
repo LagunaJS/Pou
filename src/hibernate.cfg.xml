@@ -19,7 +19,10 @@
     </property>
     <property name = "hibernate.connection.password">
     root
-    </property>       
+    </property>   
+        <property name = "hibernate.show_sql">
+    true
+    </property>     
 
 	<mapping class = "mx.itson.pou.datos.entidades.Pou"/>
 	<mapping class = "mx.itson.pou.cocina.entidades.Comida"/>

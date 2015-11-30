@@ -76,17 +76,17 @@ public class Pou {
 	}
 	
 	/**
-	 * @return El valor de la variable nivelHambre.
+	 * @return El valor de la variable nivelSatisfaccion.
 	 */
 	@Basic
 	public int getNivelSatisfaccion() {
 		return nivelSatisfaccion;
 	}
 	/**
-	 * @param Asigna a nivelHambre el valor de nivelHambre.
+	 * @param Asigna a nivelSatisfaccion el valor de nivelSatisfaccion.
 	 */
-	public void setNivelSatisfaccions(int nivelHambre) {
-		this.nivelSatisfaccion = nivelHambre;
+	public void setnivelSatisfaccion(int nivelSatisfaccion) {
+		this.nivelSatisfaccion = nivelSatisfaccion;
 	}
 	/**
 	 * @return El valor de la variable dinero.
